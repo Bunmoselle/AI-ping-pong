@@ -1,0 +1,97 @@
+<!--created by prashant shukla-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ping Pong</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+
+    </head>
+    <body>
+        <center>
+            <div class="btn btn-primary heading">
+              <h3>Ai Ping Pong </h3>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Instructions</button>
+            </div>
+      
+            <img src="mario.jpg" class="big_image">
+            <br><br>
+            <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button> 
+          <br><br>
+          <h3 id="status" class="btn btn-warning"></h3>
+          <br><br>
+          <div id="canvas"></div>>
+          <div id="game_console"></div>>
+      
+          <h4>
+            Source Code : <a href="http://github.com/linuk"></a> || Game Credit : Mario
+          </h4>
+      
+          <div id="myModal" class="modal fade "> 
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">&times;</button>
+                  <h4>Instructions</h4>
+                </div>
+                <P>1.  GAMES ARE PLAYED TO 11 POINTS
+                    A Game is played to 11 points. A Game must be won by two points. A Match is generally the best three of five Games. 
+                    
+                    2.  ALTERNATE SERVES EVERY TWO POINTS
+                    Each side of the table alternates serving two points at a time. EXCEPTION: After tied 10-10 (“deuce”), service alternates at every point. Can you lose on a serve in ping pong? Yes! There is no separate rule for serving on Game Point.
+                    
+                    3.  TOSS THE BALL STRAIGHT UP WHEN SERVING
+                    How do you serve the ball in ping pong? Hold the ball in your open palm, behind your end of the table. Toss at least 6” straight up, and strike it on the way down. It must hit your side of the table and then the other side. NOTE: Once the ball leaves the server’s hand it is in play, and so counts as the receiver’s point if the ball is missed or mis-hit. 
+                    
+                    4.  THE SERVE CAN LAND ANYWHERE IN SINGLES
+                    There is no restriction on where the ball lands on your side or your opponent’s side of the table. It can bounce two or more times on your opponent’s side (if so, that’s your point), bounce over the side, or even hit the edge. 
+                    
+                    5.  DOUBLES SERVES MUST GO RIGHT COURT TO RIGHT COURT
+                    The serve must bounce in the server’s right court, and receiver’s right court (NOTE: landing on center line is fair). Doubles partners switch places after their team serves twice.
+                    
+                    6.  A SERVE THAT TOUCHES THE NET ON THE WAY OVER IS A “LET”
+                    Can the ball hit the net in ping pong? Yes, during a RALLY, if it touches the top of the net and then otherwise lands as a legitimate hit. BUT not when serving. If a served ball hits the net on the way over and otherwise legally bounces in play, it’s a “let” serve and is done over. There is no limit on how many times this can happen. 
+                    
+                    7.  ALTERNATE HITTING IN A DOUBLES RALLY
+                    Doubles partners must alternate hitting balls in a rally, no matter where the ball lands on the table. 
+                    
+                    8.  VOLLEYS ARE NOT ALLOWED 
+                    Can you hit the ball before it bounces in ping pong? No. In regular tennis you may “volley” the ball (hitting the ball before it bounces on your side of the net). But in table tennis, this results in a point for your opponent. NOTE: When your opponent hits a ball that sails over your end of the table without touching it and then hits you or your paddle, that is still your point.  
+                    
+                    9.  IF YOUR HIT BOUNCES BACK OVER THE NET BY ITSELF IT IS YOUR POINT
+                    If you hit the ball in a rally or on a serve and it bounces back over the net after hitting your opponent’s side of the table (due to extreme spin), without your opponent touching it, that is your point.
+                    
+                    10.  TOUCHING THE BALL WITH YOUR PADDLE HAND IS ALLOWED
+                    What happens if the ball hits your finger or hand during a ping pong rally?  If the ball touches your PADDLE hand and otherwise results in a legal hit, there is no rule violation and play shall continue as normal. Your paddle hand includes all fingers and hand area below the wrist. But what if the ball touches a player’s body anywhere else during a ping pong rally? You may not touch the ball with your non-paddle hand for any reason. It will result in a point for your opponent. BUT if  your opponent’s hit sails over your side of the table without touching it, and hits any part of you or your paddle, that is still your point.
+                    
+                    11.  YOU MAY NOT TOUCH THE TABLE WITH YOUR NON-PADDLE HAND
+                    You may touch the ball or the table with your paddle hand (after reaching in to return a short serve, for example), or other parts of your body. NOTE: If the table moves at all from your touching it during a rally, that is your opponent’s point. 
+                    
+                    12.  AN “EDGE” BALL BOUNCING OFF THE HORIZONTAL TABLE TOP SURFACE IS GOOD
+                    An otherwise legal serve or hit may contact the top edge of the horizontal table top surface and be counted as valid, even if it bounces sidewise. The vertical sides of the table are NOT part of the legal playing surface.
+                    
+                    13.  HONOR SYSTEM APPLIES TO DISAGREEMENTS
+                    If no referee is present during a match and the players disagree on a certain call, the “honor system” applies and the players should find a way to agree, or play the point over. Ping pong carries a tradition of fierce but fair play. Help us keep it that way!
+                    
+                    Source: https://www.pongfit.org/official-rules-of-table-tennis
+                    </P>
+      
+              <div class="modal-body">
+      
+      
+              </div>
+              </div>
+              </div>
+            </div>
+      
+          </center>
+        <script src="main.js"></script>
+    </body>
+</html>
